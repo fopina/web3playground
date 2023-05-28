@@ -1,0 +1,22 @@
+name: x
+
+default_ecosystem: avalanche
+
+avalanche:
+  default_network: fuji
+  fuji:
+    default_provider: geth
+
+geth:
+  avalanche:
+    fuji:
+      uri: https://api.avax-test.network/ext/bc/C/rpc
+
+test:
+  mnemonic: test test test test test test test test test test test junk
+  number_of_accounts: 5
+
+plugins:
+  - name: avalanche
+  - name: solidity
+  
