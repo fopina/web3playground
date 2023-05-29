@@ -6,6 +6,8 @@ avalanche:
   default_network: fuji
   fuji:
     default_provider: geth
+    #gas_limit: max
+    gas_limit: auto
 
 geth:
   avalanche:
@@ -19,4 +21,6 @@ test:
 plugins:
   - name: avalanche
   - name: solidity
-  
+
+solidity:
+  version: 0.8.18
