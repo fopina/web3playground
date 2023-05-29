@@ -1,8 +1,10 @@
-from ape import accounts, project
+from ape import accounts, project, Contract
 
 
 def main():
-    contract = project.Storage.deployments[-1]
+    contract = project.BulkTransfer.deployments[-1]
+    print(f'Using deployment {contract}')
+
     a1 = accounts.load("acc1")
     a2 = accounts.load("acc2")
 
@@ -13,10 +15,6 @@ def main():
     
     bcheck()
 
-    print(contract.retrieve(sender=a1))
-    print(contract.retrieve(sender=a2))
-    print(contract.store(5, sender=a1))
-    print(contract.retrieve(sender=a1))
-    print(contract.retrieve(sender=a2))
+    print(contract.bulkTransferToken('0xD9D01A9F7C810EC035C0e42cB9E80Ef44D7f8692', a2, int(0.01 * 1000000000000000000), sender=a1))
 
     bcheck()

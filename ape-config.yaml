@@ -24,3 +24,10 @@ plugins:
 
 solidity:
   version: 0.8.18
+  import_remapping:
+    - "@openzeppelin=OpenZeppelin/4.9.0"
+
+dependencies:
+  - name: OpenZeppelin
+    github: OpenZeppelin/openzeppelin-contracts
+    version: 4.9.0
