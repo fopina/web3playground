@@ -1,4 +1,4 @@
-from ape import accounts, project
+from ape import accounts
 
 
 def main():
