@@ -34,3 +34,16 @@ sKewl Token:
 sKewl Poop:
 
 0x6Dd6802E2189a8D94f6cc1A5180f6c893e0bE13b on FujiTest
+
+------
+
+Gas tests
+
+# single NFT via transfer
+46232
+
+# set approve on NFT
+49322
+
+# bulkTransferNFT: 2 * (addr+snail)
+113327
