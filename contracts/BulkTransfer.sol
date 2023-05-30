@@ -16,17 +16,7 @@ contract BulkTransfer {
      * @param to recipient address
      * @param amount token amount
      */
-    function bulkTransferToken(address token, address to, uint256 amount) public returns (bool) {
+    function bulkTransfer(address token, address to, uint256 amount) public returns (bool) {
         return IERC20(token).transferFrom(msg.sender, to, amount);
-    }
-
-    /**
-     * @dev Store value in variable
-     * @param to recipient address
-     * @param amount token amount
-     */
-    function bulkTransfer(address payable to, uint256 amount) payable public returns (bool) {
-        to.transfer(amount);
-        return true;
     }
 }

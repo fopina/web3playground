@@ -1,7 +1,10 @@
-def test_initial_state(token, accounts):
+def test_initial_state(accounts):
     """
     how to get funds in test accounts?
     """
-    print(token)
     for a in accounts:
-        print(a.balance)
+        assert a.balance > -1
+
+
+def test_again():
+    assert 1 == 1

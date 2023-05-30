@@ -2,8 +2,8 @@ from ape import accounts
 
 
 def main():
-    acc1 = accounts.load('acc1')
-    acc2 = accounts.load('acc2')
+    acc1 = accounts.load("acc1")
+    acc2 = accounts.load("acc2")
     b1 = acc1.balance
     b2 = acc2.balance
     line = (b1 + b2) / 2
