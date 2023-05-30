@@ -11,11 +11,13 @@ def main():
 
     a1 = accounts.load("acc1")
     a2 = accounts.load("acc2")
+    a3 = accounts.load("acc3")
 
     def bcheck():
         print("== Balance check")
         print(f"a1: {sk.balanceOf(a1) / 1000000000000000000}")
         print(f"a2: {sk.balanceOf(a2) / 1000000000000000000}")
+        print(f"a3: {sk.balanceOf(a3) / 1000000000000000000}")
 
     bcheck()
 
@@ -24,21 +26,23 @@ def main():
         sk.approve(contract, int(0), sender=a1)
 
     try:
-        print(contract.bulkTransfer(sk, a2, int(0.01 * 1000000000000000000), sender=a1))
+        print(contract.bulkTransfer(sk, [(a2, int(0.01 * 1000000000000000000))], sender=a1))
         raise Exception("should have failed!")
     except exceptions.ContractError as e:
         if "insufficient allowance" not in str(e):
             raise
 
-    sk.approve(contract, int(0.01 * 1000000000000000000), sender=a1)
+    sk.approve(contract, int(0.04 * 1000000000000000000), sender=a1)
 
     try:
-        print(contract.bulkTransfer(sk, a2, int(0.04 * 1000000000000000000), sender=a1))
+        print(contract.bulkTransfer(sk, [(a2, int(0.05 * 1000000000000000000))], sender=a1))
         raise Exception("should have failed!")
     except exceptions.ContractError as e:
         if "insufficient allowance" not in str(e):
             raise
 
-    print(contract.bulkTransfer(sk, a2, int(0.01 * 1000000000000000000), sender=a1))
+    print(sk.transfer(a2, int(0.01 * 1000000000000000000), sender=a1))
+    print(contract.bulkTransfer(sk, [(a2, int(0.01 * 1000000000000000000)), (a3, int(0.01 * 1000000000000000000))], sender=a1))
+    print(contract.bulkTransferAllowFailure(sk, [(a2, int(0.01 * 1000000000000000000)), (a3, int(0.01 * 1000000000000000000))], sender=a1))
 
     bcheck()

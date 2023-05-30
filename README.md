@@ -11,6 +11,7 @@ pip install -r requirements.txt
 ```
 ape accounts generate acc1
 ape accounts generate acc2
+ape accounts generate acc3
 ```
 
 * Fund `acc1` with https://faucet.avax.network/
