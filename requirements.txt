@@ -1,4 +1,0 @@
-eth-ape==0.6.10
-ape-avalanche==0.6.2
-ape-solidity==0.6.5
-ape-etherscan==0.6.4
