@@ -3,7 +3,7 @@
 * install ape
 
 ```
-pip install -r requirements.txt
+pipenv install
 ```
 
 * create two wallets
