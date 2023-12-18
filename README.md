@@ -47,3 +47,7 @@ Gas tests
 
 # bulkTransferNFT: 2 * (addr+snail)
 113327
+
+## Testing
+
+Run test scripts with `ape run <SCRIPT>`. Available scripts inside [scripts](scripts)
