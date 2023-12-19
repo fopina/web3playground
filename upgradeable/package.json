@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "upgradeable",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,10 +10,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
-    "hardhat": "^2.19.2"
-  },
-  "dependencies": {
-    "@openzeppelin/hardhat-upgrades": "^3.0.0"
+    "hardhat": "^2.19.3"
   }
 }
