@@ -6,3 +6,5 @@ __pycache__
 bin/
 .cache
 node_modules
+upgradeable/cache
+upgradeable/artifacts
