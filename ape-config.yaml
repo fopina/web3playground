@@ -13,6 +13,8 @@ geth:
   avalanche:
     fuji:
       uri: https://api.avax-test.network/ext/bc/C/rpc
+    mainnet:
+      uri: https://api.avax.network/ext/bc/C/rpc
 
 test:
   mnemonic: test test test test test test test test test test test junk

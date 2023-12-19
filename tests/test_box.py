@@ -11,3 +11,10 @@ def test_box(owner, project, accounts):
     assert deployment.retrieve() == 0
     deployment.store(2, sender=accounts[1])
     assert deployment.retrieve(sender=owner) == 2
+
+
+def test_proxied_box(owner, project, accounts):
+    deployment = owner.deploy(project.BoxProxy)
+    assert deployment.retrieve() == 0
+    deployment.store(2, sender=accounts[1])
+    assert deployment.retrieve(sender=owner) == 2
