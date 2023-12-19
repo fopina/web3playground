@@ -48,6 +48,10 @@ Gas tests
 # bulkTransferNFT: 2 * (addr+snail)
 113327
 
+# to run in testnet (instead of local)
+
+`--network avalanche:fuji:geth`
+
 ## Testing
 
 Run test scripts with `ape run <SCRIPT>`. Available scripts inside [scripts](scripts)
